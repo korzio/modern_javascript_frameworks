@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+  <style>
+    div div {
+      display: flex;
+    }
+    span {
+      align-items: center
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+  </div>
+  <script>
+    Vue.component('leaf', {
+      template: "<span>me {{index}}</span>",
+      props: ['index'],
+      beforeUpdate: function() {
+        console.log(`updated ${this.index}`)
+      }
+    })
+
+    Vue.component('tree', {
+      props: ['table'],
+      methods: {
+        update: function(event) {
+          this.$set(this.table, 0, 7)
+
+          event.stopPropagation()
+        }
+      },
+render: function(createElement) {
+  return createElement('div',
+  {
+    on: {
+      'click': this.update,
+    },
+  },
+  this.table.map(row => {
+    if(typeof row === 'object') {
+      return createElement('tree', {
+        attrs: {
+          table: row,
+        }
+      })
+    }
+
+    return createElement('leaf', {
+      attrs: {
+        index: row,
+      }
+    })
+  }))
+},
+      beforeUpdate: function() {
+        console.log(`updated ${this.index}`)
+      }
+    })
+
+    // const myComponent = (index) => createElement('leaf', {
+    //   attrs: {
+    //     index,
+    //   }
+    // })
+
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        table: [[1,3,4], [2,3], [6,7]]
+      },
+      render: function(createElement) {
+        return createElement('tree', {
+          attrs: {
+            table: this.table,
+          }
+        })
+      },
+      methods: {
+        toggle: function() {
+          this.isOk = !this.isOk
+        }
+      }
+    })
+  </script>
+</body>
+</html>

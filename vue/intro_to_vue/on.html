@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
+    <p @id=id :click=greeting>test</p>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      methods: {
+        greeting: () => {
+          // 'test',
+          debugger;
+        }
+      },
+      data: {
+        id: 1
+      }
+    })
+  </script>
+</body>
+</html>

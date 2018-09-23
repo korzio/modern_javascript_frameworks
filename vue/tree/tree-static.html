@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="vue.js"></script>
+  <title>Document</title>
+  <style>
+    div {
+      display: flex;
+    }
+    span {
+      align-items: center
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <tree v-bind:items="items"></tree>
+  </div>
+  <script>
+    Vue.component('leaf', {
+      template: "<span>me {{index}}</span>",
+      props: ['index'],
+      beforeUpdate: function() {
+        console.log(`updated ${this.index}`)
+      }
+    })
+
+    Vue.component('tree', {
+      props: ['items'],
+      methods: {
+        trees: function() {
+          return this.items && this.items.filter(item => item.items)
+        }
+      },
+      beforeMount: function() {
+        console.log(this.items)
+      },
+      template: `<div>
+        <template v-for="item in items">
+          <leaf :index="item.id"></leaf>
+          <tree :items="item.items" v-if="item.items"></tree>
+        </template>
+      </div>`,
+      beforeUpdate: function() {
+        console.log(`updated ${this.index}`)
+      }
+    })
+
+    const items = [{
+      id: 1,
+      items: [{
+        id: 2,
+        items: [{
+          id: 3
+        }]
+      }]
+    }];
+
+    var vm = new Vue({
+      el: '#app',
+      data: { items }
+    })
+  </script>
+</body>
+</html>

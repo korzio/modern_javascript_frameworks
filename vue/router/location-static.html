@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <home v-if="hash === '#home'"></home>
+  <about v-else-if="hash === '#about'"></about>
+  <not-found v-else></not-found>
+</div>
+  <script>
+    const routes = {
+      'file:///Users/AAAA/Sites/otus/vue/4/location-static.html': 'home',
+      'file:///Users/AAAA/Sites/otus/vue/4/location-static.html#about': 'about'
+    }
+
+    Vue.component('not-found', {
+      template: '<p>Page not found</p>'
+    })
+
+    Vue.component('home', {
+      template: '<p>home page</p>'
+    })
+
+    Vue.component('about', {
+      template: '<p>about page</p>'
+    })
+
+  var vue = new Vue({
+    el: '#app',
+    data: {
+      currentRoute: window.location.href,
+      hash: window.location.hash
+    },
+    computed: {
+      route () {
+        return routes[this.currentRoute] || 'not-found'
+      }
+    }
+  })
+
+  window.onhashchange = function() {
+    vue.currentRoute = window.location.href;
+  }
+
+  window.onpopstate = function() {
+    vue.currentRoute = window.location.href;
+  }
+  </script>
+</body>
+</html>

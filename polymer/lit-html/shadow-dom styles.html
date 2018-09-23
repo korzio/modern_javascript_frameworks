@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello element demo</title>  
+</head>
+<body>
+<style>
+  h3 { color: blue; }
+  my-element { color: black; }
+</style>
+<script>
+  class CustomElement extends HTMLElement {
+    constructor() {
+      super()
+      this.attachShadow({ mode: 'open' })
+    }
+    connectedCallback() {
+      this.shadowRoot.innerHTML = `
+        <style>
+          :host-context(body) { color: blue; }
+        </style>
+        <h3>Shadow DOM</h3>
+      `
+    }
+  }
+  customElements.define('my-element', CustomElement);
+</script>
+  
+  <h3>Normal DOM</h3>
+  <my-element class=test></my-element>
+</body>
+</html>

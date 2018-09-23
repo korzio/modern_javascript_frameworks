@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+</head>
+<body>
+  <ul id="app">
+    <li v-for="(link, index) in normalized">
+      <a :href="links[index]">{{link}}</a>
+    </li>
+  </ul>
+  <script>
+    var v = new Vue({
+      el: '#app',
+      data: {
+        links: [
+          'http://vuejs.org/guide/',
+          'https://chat.vuejs.org',
+          'http://forum.vuejs.org/'
+        ],
+        normalized: null,
+      },
+      watch: {
+        links: {
+          immediate: true,
+          handler: function(oldLinks) {
+            this.normalized = oldLinks.map(this.humanizeURL);
+          }
+        }
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+             .replace(/^https?:\/\//, '')
+             .replace(/\/$/, '')
+        },
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+      <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/bar">Go to Bar</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
+  <script>
+    const Foo = { template: '<div>foo</div>' }
+    const Bar = { template: `
+    <div>
+      bar
+      <router-link to="/bar/profile">UserProfile</router-link>
+      <router-link to="/bar/posts">UserPosts</router-link>
+      <router-view></router-view>
+    </div>` }
+    const UserProfile = { template: '<div>UserProfile</div>' }
+    const UserPosts = { template: '<div>UserPosts</div>' }
+
+    const routes = [
+      { path: '/foo', component: Foo },
+      { path: '/bar', component: Bar, children: [
+        {
+          path: 'profile',
+          component: UserProfile
+        },
+        {
+          path: 'posts',
+          component: UserPosts
+        }
+      ]}
+    ]
+
+    const router = new VueRouter({
+      routes,
+    })
+    const app = new Vue({
+      router,
+      el: '#app',
+    })
+  </script>
+</body>
+</html>

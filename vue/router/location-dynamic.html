@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const NotFound = { template: '<p>Page not found</p>' }
+    const Home = { template: '<p>home page</p>' }
+    const About = { template: '<p>about page</p>' }
+
+    const routes = {
+      'file:///Users/AAAA/Sites/otus/vue/4/location-dynamic.html': Home,
+      'file:///Users/AAAA/Sites/otus/vue/4/location-dynamic.html#about': About
+    }
+
+var vue = new Vue({
+  el: '#app',
+  data: {
+    currentRoute: window.location.href
+  },
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute] || NotFound
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
+})
+
+window.onhashchange = function() {
+  vue.currentRoute = window.location.href;
+}
+
+window.onpopstate = function() {
+  vue.currentRoute = window.location.href;
+}
+  </script>
+</body>
+</html>

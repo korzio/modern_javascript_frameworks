@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
+    <h1 v-on:click="reverseMessage">{{ greeting }}</h1>
+    <p>{{
+      greeting.split('').reverse().join('')
+    }}</p>
+    <ul>
+      <li v-for="url in links">
+        <my-link
+          v-on:test="onEnlargeText"
+          v-bind:data="url">
+        </my-link>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    Vue.component('my-link', {
+      props: ['data'],
+      methods: {
+        humanizeURL: function (url) {
+          return url
+             .replace(/^https?:\/\//, '')
+             .replace(/\/$/, '')
+        },
+        handle: function() {
+          debugger;
+        }
+      },
+      template: '<a v-bind:href="data" v-on:click="handle">{{ humanizeURL(data) }}</a>'
+    })
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Welcome to your Vue.js app!',
+        links: [
+          'http://vuejs.org/guide/',
+          'https://chat.vuejs.org',
+          'http://forum.vuejs.org/'
+        ]
+      },
+      methods: {
+        reverseMessage: function () {
+          debugger;
+          this.greeting = this.greeting.split('').reverse().join('')
+        },
+        onEnlargeText: function(){
+          debugger;
+        }
+      },
+      beforeCreate: () => console.log(1),
+      created: () => console.log(2),
+      beforeMount: () => console.log(3),
+      mounted: () => console.log(4),
+      beforeUpdate: () => console.log(5),
+      updated: () => console.log(6),
+      beforeDestroy: () => console.log(7),
+      destroyed: () => console.log(8),
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "my-element",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "polymer test -l chrome --skip-selenium-install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

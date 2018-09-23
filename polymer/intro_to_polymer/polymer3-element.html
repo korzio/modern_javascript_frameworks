@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta name="description" content="Polymer 3.0 example">
+  <!-- Polyfills only needed for Firefox and Edge. -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+</head>
+<body>
+  <script type="module">
+    import { PolymerElement, html } from 'https://unpkg.com/@polymer/polymer/polymer-element.js?module';
+    
+    class MyElement extends PolymerElement {
+      static get template() {
+        return html`?`;
+      }
+    }
+
+    class MyElement2 extends MyElement {
+      static get properties() { return { mood: String }}
+      static get template() {
+        return html`
+          <style> .mood { color: green; } </style>
+          Web Components are <span class="mood">[[mood]]</span>!${super.template}
+        `;
+      }
+    }
+    
+    class MyElement3 extends PolymerElement {
+      constructor() {
+        super()
+        this.username = 'username'
+      }
+      static get template() {
+        return html`Hello [[username]]!`;
+      }
+    }
+    customElements.define('my-element3', MyElement3)
+
+    customElements.define('my-element', MyElement2);
+  </script>
+  <my-element mood="awesome"></my-element>
+  <my-element3></my-element3>
+  
+</body>
+</html>

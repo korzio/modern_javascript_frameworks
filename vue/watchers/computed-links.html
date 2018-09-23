@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SyncFiddle</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+  	<ul>
+      <li v-for="link in normalizedLinks">
+        <a href="link">{{link}}</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    new Vue({
+    	el: '#app',
+      data: {
+      	links: [
+        	'https://www.google.nl/?gfe_rd=cr&dcr=0&ei=dC_WWt7SI5TSXq_KvZgL'
+        ],
+      },
+      computed: {
+      	normalizedLinks: function() {
+          return this.links.map(this.humanizeURL);
+        }
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+             .replace(/^https?:\/\//, '')
+             .replace(/\?.*/, '')
+             .replace(/\//, ' ')
+        },
+      }
+    })
+
+  </script>
+</body>
+</html>

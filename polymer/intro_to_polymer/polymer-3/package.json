@@ -1,0 +1,12 @@
+{
+  "name": "2-1",
+  "dependencies": {
+    "@polymer/iron-ajax": "^3.0.0-pre.25",
+    "@polymer/polymer": "^3.0.0",
+    "selenium-standalone": "^6.15.2"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}

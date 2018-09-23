@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="module">
+    import {LitElement, html, property} from '@polymer/lit-element';
+
+    class MyElement extends LitElement {
+
+      static get properties() {
+        return {
+          mood: {type: String}
+        };
+      }
+
+      constructor() {
+        super();
+        this.mood = 'happy';
+      }
+
+      render() {
+        return html`<style> .mood { color: green; } </style>
+          Web Components are <span class="mood">${this.mood}</span>!`;
+      }
+
+    }
+
+    customElements.define('my-element', MyElement);
+  </script>
+</head>
+<body>
+  <my-element mood="happy"></my-element>
+</body>
+</html>

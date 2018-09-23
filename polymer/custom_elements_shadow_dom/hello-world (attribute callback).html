@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello element demo</title>
+</head>
+<body>
+    <script>
+class HelloWorldElement extends HTMLElement {
+  static get observedAttributes() {
+    return ['name']
+  }
+  constructor() {
+    super()
+    console.log()
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    this._name = newValue
+  }
+  connectedCallback() {
+    this.name = this.getAttribute('name') || 'World'
+  }
+  get name() {
+    return this._name
+  }
+  set name(name) {
+    this.setAttribute('name', name)
+    this.render()
+  }
+  render() {
+    this.textContent = `Hello ${this.name}`
+  }
+}
+customElements.define('hello-world-element', HelloWorldElement)
+    </script>
+    <hello-world-element name="bladibla"></hello-world-element>
+    <hello-world-element></hello-world-element>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello element demo</title>
+</head>
+<body>
+  <script>
+    class CustomElement extends HTMLElement {
+      constructor() {
+        super()
+        console.log('constructor')
+      }
+      connectedCallback() {
+        this.textContent = "Hello Custom Element"
+      }
+      disconnectedCallback() {
+        console.log('disconnectedCallback')
+      }
+      adoptedCallback() {
+        console.log('adoptedCallback')
+      }
+      attributeChangedCallback() {
+        console.log('attributeChangedCallback')
+      }
+      static get observedAttributes() {
+        return ['test']
+      }
+    }
+    customElements.define('hello-custom-element', CustomElement);
+  </script>
+  <hello-custom-element test="ad"></hello-custom-element>
+</body>
+</html>

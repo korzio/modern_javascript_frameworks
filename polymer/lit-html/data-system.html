@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello polymer demo</title>
+  <link rel="import" href="https://raw.githubusercontent.com/Polymer/polymer/master/polymer-element.html">
+    <script>
+class MyElement extends Polymer.Element {
+  static get is() { return "my-element" }
+  constructor() {
+    super()
+    console.log('constructor')
+    this.a = 1
+  }
+  static get template() {
+    return `<p>[[a]] [[someProp]]</p>`
+  }
+  static get properties() {
+    return {
+      someProp: {
+        type: String,
+        notify: true,
+        value: 3
+      }
+    }
+  }
+}
+customElements.define(MyElement.is, MyElement)
+    </script>
+</head>
+<body>
+  <my-element></my-element>
+</body>
+</html>

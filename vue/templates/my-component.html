@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <my-component></my-component>
+  </div>
+  </div>
+  <script>
+    Vue.component('my-component', {
+      // options
+      template: "<div>A custom component!</div>"
+    })
+
+    new Vue({
+      el: '#app',
+      data: {
+        isActive: false
+      }
+    })
+  </script>
+</body>
+</html>

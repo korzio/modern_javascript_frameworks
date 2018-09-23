@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello element demo</title>
+</head>
+<body>
+  <script>
+
+function factorial(strings, num) {
+  let res = 1;
+  let mu = ''
+  while(num) {
+    res *= num;
+    mu = num + ' * ' + mu
+    num--
+  }
+
+	return strings[0] + mu.substr(0, mu.length -2) + strings[1] + res
+}
+
+console.log(factorial`multiply this ${4} and get `)
+
+</script>
+</body>
+</html>

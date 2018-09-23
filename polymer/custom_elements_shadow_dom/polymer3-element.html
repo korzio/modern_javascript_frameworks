@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta name="description" content="Polymer 3.0 example">
+  <!-- Polyfills only needed for Firefox and Edge. -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+</head>
+<body>
+  <script type="module">
+    import { PolymerElement, html } from 'https://unpkg.com/@polymer/polymer/polymer-element.js?module';
+    
+    class MyElement extends PolymerElement {
+      static get template() {
+        return html`?`;
+      }
+    }
+
+    class MyElement2 extends MyElement {
+      static get properties() { return { mood: String }}
+      static get template() {
+        return html`
+          <style> .mood { color: green; } </style>
+          Web Components are <span class="mood">[[mood]]</span>!${super.template}
+        `;
+      }
+      static get observedAttribute() {
+          return ['alt', 'sticky'];
+      }
+      constructor() {
+        super()
+        console.log('constructor')
+      }
+      disconnectedCallback() {
+        console.log('disconnectedCallback')
+      }
+      connectedCallback() {
+        super.connectedCallback()        
+        console.log('connectedCallback')
+      }
+      ready() {
+        super.ready()
+        console.log('ready')
+      }
+      adoptedCallback() {
+        console.log('adoptedCallback')
+      }
+      attributeChangedCallback() {
+        console.log('attributeChangedCallback')
+      }
+    }
+
+    customElements.define('my-element', MyElement2);
+    document.createElement('my-element')
+  </script>
+  <my-element mood="awesome"></my-element>
+</body>
+</html>

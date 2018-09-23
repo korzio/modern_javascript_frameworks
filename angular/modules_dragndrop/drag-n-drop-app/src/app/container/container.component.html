@@ -1,0 +1,12 @@
+<div #me
+  class="draggable"
+  [ngStyle]="state.style"
+  (mousemove)="move($event)"
+  (mousedown)="down($event)"
+  (mouseup)="up()"
+>
+  drag me
+  <!-- <pre>{{ state | json }}</pre> -->
+</div>
+
+

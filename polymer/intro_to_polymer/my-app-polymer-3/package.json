@@ -1,0 +1,13 @@
+{
+  "name": "my-app2",
+  "scripts": {
+    "test": "node /Users/AAAA/AAAA/picard-application-build/node_modules/polymer-cli/bin/polymer test -l chrome --skip-selenium-install"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}

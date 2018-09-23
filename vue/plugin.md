@@ -1,0 +1,1 @@
+Plugin system concept VS declaration for a namespace concepts - are the any commons?

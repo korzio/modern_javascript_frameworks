@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Node examples for QA",
+  "main": "events.js",
+  "scripts": {
+    "start": "node stream/readable"
+  },
+  "author": "korzio@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "http-serve": "^1.0.1",
+    "pm2": "^3.0.0"
+  }
+}

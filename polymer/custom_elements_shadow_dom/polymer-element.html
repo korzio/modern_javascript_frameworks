@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello polymer demo</title>
+  <link rel="import" href="https://polygit.org/components/polymer/polymer-element.html">
+  <script>
+    class CustomElement extends Polymer.Element {
+      static get is() { return "hello-polymer"; }
+      static get observedAttribute() {
+          return ['alt', 'sticky'];
+      }
+      constructor() {
+        super()
+        console.log('constructor')
+      }
+      disconnectedCallback() {
+        console.log('disconnectedCallback')
+      }
+      ready() {
+        console.log('ready')
+      }
+      adoptedCallback() {
+        console.log('adoptedCallback')
+      }
+      attributeChangedCallback() {
+        console.log('attributeChangedCallback')
+      }
+    }
+    customElements.define(CustomElement.is, CustomElement);
+  </script>
+</head>
+<body>
+  <hello-polymer>123</hello-polymer>
+</body>
+</html>

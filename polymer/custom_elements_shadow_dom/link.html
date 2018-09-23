@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+  <title>hello element demo</title>
+</head>
+<body>
+  <script>
+    class MyLink extends HTMLAnchorElement {
+      constructor() {
+        super()
+        console.log('custom link')
+        // this.addEventListener('click', (e) => { e.preventDefault() })
+      }
+    }
+
+    customElements.define("my-link", MyLink, { extends: "a" })
+    // var a = document.createElement("a", { is: "my-link" })
+    // a.innerHTML = '123'
+    // a.setAttribute('href', '333')
+    // document.body.appendChild(a)
+  </script>
+  <a is="my-link" href="/?test#123">my aasd</a>
+</body>
+</html>

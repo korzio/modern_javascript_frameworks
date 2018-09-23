@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class MyLink extends HTMLAnchorElement {
+      constructor() {
+        super()
+        
+        console.log('my link is working')
+      }
+    }  
+    
+    customElements.define('my-link', MyLink, { extends: 'a' })
+  </script>
+  
+  <a href="#123">normal link</a>
+  <a href="#12345" is="my-link">test</a>
+</body>
+</html>

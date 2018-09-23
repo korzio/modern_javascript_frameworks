@@ -1,0 +1,10 @@
+<div class="draggable"
+  [ngStyle]="state.style"
+  (mouseup)="up()"
+  (mousedown)="down($event)"
+  (mousemove)="move($event)"
+>
+  Drag me!
+
+  <pre>{{ counter }}</pre>
+</div>

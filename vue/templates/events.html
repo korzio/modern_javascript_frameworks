@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      asd
+      <my-component
+        v-for="item in items"
+        v-bind:title="item"
+        v-on:test="onEnlargeText">
+      </my-component>
+
+      <button v-on:click="$emit('test')">
+        Enlarge text
+      </button>
+    </div>
+  </div>
+  </div>
+  <script>
+    Vue.component('my-component', {
+      template: "<div v-on:click=\"$emit('test')\">{{title}}</div>",
+      props: ['title'],
+    })
+
+    new Vue({
+      el: '#app',
+      data: {
+        items: [1,2,3]
+      },
+      methods: {
+        onEnlargeText: function () {
+          console.log(123)
+        }
+      }
+    })
+  </script>
+</body>
+</html>
