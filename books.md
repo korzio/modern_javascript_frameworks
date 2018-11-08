@@ -39,3 +39,15 @@
   - [Web Design](https://drive.google.com/open?id=1FCIUB1o_QpVXd2FMyxJCfIivIpqCbRyG)
   - [Yii 2](https://drive.google.com/open?id=1C1omBGp6MCfGmn7qP5mBPLWAmjO11Kfj)
     - [Магk Safгonov - Web Application Development with Yii 2 and РНР - 2015](https://drive.google.com/open?id=0B9Enhm8f8xBqQ08wNy1JVnpiTkU)
+
+TODO
+descripe each book for sections:
+
+- javascript
+- Linux
+- Math
+- Node
+- PHP
+- Regex
+- Vue
+- Web Design
