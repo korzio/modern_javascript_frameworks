@@ -41,7 +41,7 @@
     - [Магk Safгonov - Web Application Development with Yii 2 and РНР - 2015](https://drive.google.com/open?id=0B9Enhm8f8xBqQ08wNy1JVnpiTkU)
 
 TODO
-descripe each book for sections:
+describe each book for sections:
 
 - javascript
 - Linux
