@@ -12,3 +12,4 @@ However a default language for the repository is English, a part of material is 
 - [Rules for homeworks](./rules.md)
 - [Homeworks](./homework.md)
 - [Join us in Slack](./slack.md)
+- [Our Library](./books.md)
