@@ -20,3 +20,4 @@ Please find [project and `MR` example here](https://github.com/korzio/korzhikov-
 
 - test & build *SHOULD* pass
 - *MAY* work with `git` from command line, not using `github` web interface
+- While adding changes to already opened MR, please don't close the MR - commit to the same branch with homework. Then link to MR with home work will stay the same and all the previous comments will stay in place. Gihub UI is advaced enough to highlight the changed spots.
