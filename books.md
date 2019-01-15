@@ -25,6 +25,7 @@ Here presents Books which may being useful while walkthrow the course.
     - [Denys Vuika Developing with Angular 2018](https://drive.google.com/open?id=1jjlw8mXXSjDEDrNVWTWp2wjcF15hpPRk)
       - **Book description:** Practical journey with Angular framework, ES6, TypeScript, Webpack and Angular CLI.
       - **Buy the book:** [link](https://leanpub.com/developing-with-angular)
+
   - [CSS](https://drive.google.com/open?id=1pcu-2G-K6TzQZKRpIsHIEW10ry4codMq)
     - [Tiffany B. Browm - CSS Master - 2015](https://drive.google.com/open?id=0B9Enhm8f8xBqQm9LYVdRNjNldzg)
     - [CSS3 для веб-дизайнеров](https://drive.google.com/open?id=0B9Enhm8f8xBqYmxWSEtPM2FfN0k)
@@ -33,6 +34,8 @@ Here presents Books which may being useful while walkthrow the course.
     - [Kianosh Pourian - Sass in the Real World](https://drive.google.com/open?id=0B9Enhm8f8xBqREhVTHNXbXNKWTA)
     - [Lea Verou - Секреты CSS - 2016](https://drive.google.com/open?id=0B9Enhm8f8xBqZC1pZUR3VTRvQWc)
     - [Eric Meyer - Smashing CSS - 2011](https://drive.google.com/open?id=0B9Enhm8f8xBqT2RrdUtOVXYzUjQ)
+    - [Новая большая книга CSS - 2016](https://drive.google.com/open?id=1Jq0XSaXpPEyqHjHtwRSPq8TBVbnjBje6)
+    - [HTML5 and CSS3 Основы современного веб-дизайна - 2018](https://drive.google.com/open?id=1iG16Ay7roHUxvrL-nxlI28EBKYNwuEtr)    
   - [Express](https://drive.google.com/open?id=18XnPegotk-7hWXtlx684EbmBGaFztpk5)
     - [Flavio Copes - The Express Hand Book - 2018](https://drive.google.com/open?id=1xF1Ap4MoSx0dLdVa4W0Iz9SswHz-YTCl)
   - [General programming](https://drive.google.com/open?id=1pigNh_bOTf6e_EwEoG0mCJS1b8Ov506o)
@@ -46,16 +49,36 @@ Here presents Books which may being useful while walkthrow the course.
   - [Git](https://drive.google.com/open?id=15TKAIyTpcdF-8DOJ61yF0Br2b9Dv4A1e)
     - [Scott Chacon, Ben Straub - Pro Git - 2018](https://drive.google.com/open?id=10HCWrDKwuTvTnJb18hlOG-DUkfN4TMQY)
   - [JavaScript](https://drive.google.com/open?id=16qOagVKyLQy2Pt-K56OhErbJRthJ8eba)
+    - [JavaScript для детей - 2016](https://drive.google.com/open?id=1wiIbyNMjMBjRpkawgk1mL-jsvErJIhBK)
+    - [JavaScript Recipes - 2017](https://drive.google.com/open?id=1Lh_SXilgmFMtotkbVzgOqb1kHHfZh_92)
+    - [HTML5 and JavaScript Projects - 2018](https://drive.google.com/open?id=1etvx-YBN3UOmWruydylxX9bTvzdSF1By)
+    - [Eloquent JavaScript - 2018](https://drive.google.com/open?id=1a8sLH0mO5rgB86uDDbmclUywaH_2bcAK)
+    - [Exploring ES6 - 2015](https://drive.google.com/open?id=1rdxPhagzA6jJUhZB1PvWuhtBef7JL4DD)
+    - [ES6 for Humans - 2017](https://drive.google.com/open?id=1y9zdWehyXpLJY6gldy6ovHpKNL4NjrI4)  
   - [Linux](https://drive.google.com/open?id=1ZnkvxIsjYN7sdIunNsd3niKA8pQi3JdA)
   - [Math](https://drive.google.com/open?id=1eHKR3C3FzXecf2pysShkZ37YslHtgiYO)
   - [Node](https://drive.google.com/open?id=1ecevKdyla3Y29Z8FcKF5ID039krPSej6)
+    - [Изучаем Node. Переходим на сторону сервера. - 2017](https://drive.google.com/open?id=1QDYYG5pTmi2149gnYPsnnz27u26rKpBV)
+    - [Веб-разработка с применением Node и Express - 2017](https://drive.google.com/open?id=1Ppxg4tFlcgWx6-XUSW3e0lSE_ybBWyC0)
+    - [REST API Design Rulebook](https://drive.google.com/open?id=1wEjdNcJapumBK4weYfu4e7EF4EYAJIeY)
+    - [Node.js в действии - 2018](https://drive.google.com/open?id=1qCs-zyJ3ZeE_V_v3NoMYavGHvQ0cM7J1)
+    - [Node.js 6.x Blueprints - 2016](https://drive.google.com/open?id=1dd0ZDSF5mLiOgwmgTb3wLMueDqbBDV5M)
+    - [Node.js Design Patterns - 2016](https://drive.google.com/open?id=1hM9_BjgNBYBXD6qYjKvH2QymUinxNZm-)  
   - [PHP](https://drive.google.com/open?id=1olAy6-pjT-AhA7kEzKWaBoBzlvkle7-0)
   - [Regex](https://drive.google.com/open?id=1-Tau_yvyLEKdxCXLUapu97uKqOkiw8GQ)
   - [Vue](https://drive.google.com/open?id=1nwbalgoR7Zhxqxg4wFrc3ldYR5ky4EY2)
+    - [Vue.js: Up and Running - 2018](https://drive.google.com/file/d/1BBQ3BdH61212CW6t2K5dyaYe1rSWtVRP/view?usp=sharing)
+    - [Pro Vue.js 2 - 2018](https://drive.google.com/open?id=1UeXgX_0I-m5fdRol5RFfKYGloJS75uBv)
+    - [Learning Vue.js 2 - 2016](https://drive.google.com/open?id=1NtIAQuETM1v_oIwVU82N7lspmV62LeKm)
+    - [Getting to Know Vue.js - 2018](https://drive.google.com/open?id=1UJqf0neXqET23n-5-8snSBKohQmnZxWL)  
   - [Web Design](https://drive.google.com/open?id=1FCIUB1o_QpVXd2FMyxJCfIivIpqCbRyG)
   - [Yii 2](https://drive.google.com/open?id=1C1omBGp6MCfGmn7qP5mBPLWAmjO11Kfj)
     - [Магk Safгonov - Web Application Development with Yii 2 and РНР - 2015](https://drive.google.com/open?id=0B9Enhm8f8xBqQ08wNy1JVnpiTkU)
+  - [Selenium](https://drive.google.com/open?id=1odqmYbNtLm-PwaEro6m0vglWdkaMgM7g)
+    - [Selenium Testing Tools Cookbook](https://drive.google.com/open?id=1Ne9EZLyLEWAW5AVhHLuzbCkjkhUdGOBJ)
+    - [Selenium Programming Cookbook](https://drive.google.com/open?id=1oGYIu4RAh1JQksiIJPP6AOwwIGAr4ibZ)    
 
 TODO: descripe each book for sections:
 
 TODO: filter books for stuff relevants
+
