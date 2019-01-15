@@ -1,14 +1,30 @@
 # Books
 
+Here presents Books which may being useful while walkthrow the course.
+
+(*Find need section and take a book for personal acquaintance. If you decide that this book is useful for you, Buy this one on official vendor.*)
+
 - [Books](https://drive.google.com/open?id=1NNCV4pYKXPhXTl0bhQMHHgr0jwmrUwtl)
   - [Algorithms](https://drive.google.com/open?id=0B9Enhm8f8xBqSlNub18yd2JTMzA)
-    - [Bhargava A. Y. - Grokking Algorithms - 2016](https://drive.google.com/open?id=1wA14LsEFFExg-n8K04hY0taWkODFuylO)
-    - [Sedgewick & Wayne - Algorithms - 4 edition - 2013](https://drive.google.com/open?id=0B9Enhm8f8xBqM0JBd1M4NWlTbEE)
-    - [Кормен - Алгоритмы. Построение и анализ - 2 edition - 2005](https://drive.google.com/open?id=1_9SYPW9ypyO2x7Fd4_E1OZ5C_7_mUnbw)
-    - [Левитин - Алгоритмы. Введение в разработку и анализ - 2006](https://drive.google.com/open?id=0B9Enhm8f8xBqMG94UUNzVTVvWlk)
-    - [Луридес - Алгоритмы для начинающих - 2018](https://drive.google.com/open?id=1XylnsDoTkeSZ1VWzH0yHaup8HU0IhKeJ)
+    - [Bhargava A. Y. "Grokking Algorithms" 2016](https://drive.google.com/open?id=1wA14LsEFFExg-n8K04hY0taWkODFuylO)
+      - **Book description:** Алгоритмы - это всего лишь последовательность решения задач, и большинство таких задач уже были кем-то решены, протестированы и проверены. Можно, конечно, погрузиться в глубокую философию гениального Кнута, изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время? Откройте великолепно иллюстрированную книгу и вы сразу поймете, что алгоритмы - это просто. А грокать алгоритмы - это веселое и увлекательное занятие.
+      - **Buy the book:** [link](https://www.ozon.ru/context/detail/id/139296295/)
+    - [Robert Sedgewick & Kevin Wayne "Algorithms" 4 edition 2013](https://drive.google.com/open?id=0B9Enhm8f8xBqM0JBd1M4NWlTbEE)
+      - **Book description:** Surveys the most important algorithms and data structures in use today. We motivate each algorithm that we address by examining its impact on applications to science, engineering, and industry.
+      - **Buy the book:** [link](http://www.informit.com/promotions/robert-sedgewick--141125)
+    - [Томас Х. Кормен, Чарльз И. Лейзерсон, Рональд Л. Ривест, Клиффорд Штайн "Алгоритмы. Построение и анализ" 2 edition 2005](https://drive.google.com/open?id=1_9SYPW9ypyO2x7Fd4_E1OZ5C_7_mUnbw)
+      - **Book description:** Книга "Алгоритмы. Построение и анализ" удачно объединяет в себе полноту охвата и строгость изложения материала. Много книг, посвященных алгоритмам, отличается строгостью изложения материала, но страдает определенной неполнотой; другие книги охватывают огромный объем материала, но недостаточно строго излагают его. В книге "Алгоритмы. Построение и анализ" описаны самые разнообразные алгоритмы, сочетается широкий диапазон тем с глубиной и полнотой изложения; при этом изложение доступно для читателей самого разного уровня подготовки.
+      - **Buy the book:** [link](https://www.ozon.ru/context/detail/id/33769775/)
+    - [Ананий Левитин, Игорь Красиков "Алгоритмы. Введение в разработку и анализ" 2006](https://drive.google.com/open?id=0B9Enhm8f8xBqMG94UUNzVTVvWlk)
+      - **Book description:** Эта книга, автором которой является опытный преподаватель информатики, представляет собой один из лучших учебников, посвященных алгоритмам. Делая основной упор на понимание идей, а не на механическое рассмотрение работы того или иного алгоритма, автор излагает ключевые принципы и методы разработки алгоритмов так, что они могут быть применены как универсальный инструментарий для широкого диапазона задач, а не только для разработки алгоритмов. Несмотря на отсутствие громоздких математических доказательств, в книге выдержана достаточная математическая строгость.
+      - **Buy the book:** [link](https://www.ozon.ru/context/detail/id/2963462/)
+    - [Луридес "Алгоритмы для начинающих. Теория и практика для разработчика" 2018](https://drive.google.com/open?id=1XylnsDoTkeSZ1VWzH0yHaup8HU0IhKeJ)
+      - **Book description:** Алгоритмы нужны для того, чтобы помогать людям бездельничать. Прогнозирование погоды и курсов валют, сортировка и систематизация документов, сложнейшие математические расчеты - человеку пришлось бы трудиться над выполением этих задач не один день, хотя машина способна справиться с ними за секунды. И все это заслуга алгоритмов, лежащих в основе любого машинного кода. Книга предназначена для тех, кто хочет разобраться в математических основах программирования.
+      - **Buy the book:** [link](https://www.ozon.ru/context/detail/id/143951287/)
   - [Angular](https://drive.google.com/open?id=1jmPDzYk8voQ4FGNKytEWsWEJTpTzv1CX)
-    - [Denys Vuika - Developing with Angular - 2018](https://drive.google.com/open?id=1jjlw8mXXSjDEDrNVWTWp2wjcF15hpPRk)
+    - [Denys Vuika Developing with Angular 2018](https://drive.google.com/open?id=1jjlw8mXXSjDEDrNVWTWp2wjcF15hpPRk)
+      - **Book description:** Practical journey with Angular framework, ES6, TypeScript, Webpack and Angular CLI.
+      - **Buy the book:** [link](https://leanpub.com/developing-with-angular)
   - [CSS](https://drive.google.com/open?id=1pcu-2G-K6TzQZKRpIsHIEW10ry4codMq)
     - [Tiffany B. Browm - CSS Master - 2015](https://drive.google.com/open?id=0B9Enhm8f8xBqQm9LYVdRNjNldzg)
     - [CSS3 для веб-дизайнеров](https://drive.google.com/open?id=0B9Enhm8f8xBqYmxWSEtPM2FfN0k)
