@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // fetch('add.wasm')
+    //   .then(response => response.arrayBuffer())
+    //   .then(buffer => WebAssembly.instantiate(buffer))
+    //   .then(({module, instance}) => {
+    //     debugger;
+    //     instance.exports.add(1, 1)
+    //   })
+    
+    // const importObj = {js: {
+    //   import1: () => console.log("hello,"),
+    //   import2: () => console.log("world!"),
+    // }}
+    
+    // fetch('import.wasm').then(response =>
+    //   response.arrayBuffer()
+    // ).then(buffer =>
+    //   WebAssembly.instantiate(buffer, importObj)
+    // ).then(({module, instance}) => {
+    //   debugger;
+    //   instance.exports.f()
+    // })
+    
+    const memory = new WebAssembly.Memory({
+      initial: 1
+    })
+    
+    // fetch('store.wasm')
+    //   .then(response => response.arrayBuffer())
+    //   .then(buffer => WebAssembly.instantiate(buffer, { env: { memory }}))
+    //   .then(({module, instance}) => {
+    //     const bytes = new Uint8Array(memory.buffer, 0, 1111)
+    //     const string = new TextDecoder('utf8').decode(bytes)
+    //     console.log(string)
+        
+    //     var i32 = new Uint32Array(memory.buffer);
+    //     for (var i = 0; i < i32.length; i++) {
+    //       console.log(i32[i])
+    //     }
+    //   })
+      
+    fetch('test3.wasm')
+      .then(response => response.arrayBuffer())
+      .then(buffer => WebAssembly.instantiate(buffer, { env: { puts: function(){} } }))
+      .then(({module, instance}) => {
+        console.log(instance.exports.main());
+      })
+    
+    // fetch('add-c.wasm')
+    //   .then(response => response.arrayBuffer())
+    //   .then(buffer => WebAssembly.compile(buffer))
+    //   .then((module, imports) => {
+    //     // Create the imports for the module, including the
+    //     // standard dynamic library imports
+    //     imports = imports || {};
+    //     imports.env = imports.env || {};
+    //     imports.env.__memory_base = imports.env.memoryBase || 0;
+    //     imports.env.__table_base = imports.env.tableBase || 0;
+    //     if (!imports.env.memory) {
+    //       imports.env.memory = new WebAssembly.Memory({ initial: 256 });
+    //     }
+    //     if (!imports.env.table) {
+    //       imports.env.table = new WebAssembly.Table({ initial: 0, element: 'anyfunc' });
+    //     }
+    //     // Create the instance.
+    //     return new WebAssembly.Instance(module, imports);
+    //   })
+    //   .then(a => { debugger; return a })
+    //   .then(({module, instance}) => {
+    //     debugger;
+    //     console.log(instance.exports.main());
+    //   })
+  </script>
+</body>
+</html>
