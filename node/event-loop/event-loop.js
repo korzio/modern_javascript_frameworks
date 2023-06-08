@@ -1,16 +1,9 @@
 const fs = require('fs')
 
-setTimeout(() => {
-  console.log('timeout out')
-  process.nextTick(next)
-})
-setTimeout(() => {
-  console.log('timeout out2')
-  process.nextTick(next)
-})
+setTimeout(() => console.log('timeout out'))
 setImmediate(() => console.log('immediate out'))
 
-fs.readFile('./events.js', (err, data) => {
+fs.readFile('./events.js', () => {
   console.log('fs')
   process.nextTick(() => console.log('next in'))
   setTimeout(() => console.log('timeout in'))
@@ -19,6 +12,7 @@ fs.readFile('./events.js', (err, data) => {
 
 const next = () => {
   console.log('next')
+  // process.nextTick(next)
 }
 
 process.nextTick(next)
